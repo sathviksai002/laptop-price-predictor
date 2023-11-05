@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Predictor</title>
+    <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+    <h1> Laptop Price Predictor</h1>
+    <div class="login">
+         <form action="/predict" method="post">
+            <div class="container">
+                <label for="company">Company</label>
+                <select name="company" id="company" required>
+                    <option hidden disabled selected value=""></option>
+                    <option value="Acer">Acer</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Asus">Asus</option>
+                    <option value="Chuwi">Chuwi</option>
+                    <option value="Dell">Dell</option>
+                    <option value="Fujitsu">Fujitsu</option>
+                    <option value="Google">Google</option>
+                    <option value="HP">HP</option>
+                    <option value="Huawei">Huawei</option>
+                    <option value="LG">LG</option>
+                    <option value="Lenovo">Lenovo</option>
+                    <option value="MSI">MSI</option>
+                    <option value="Mediacom">Mediacom</option>
+                    <option value="Microsoft">Microsoft</option>
+                    <option value="Razer">Razer</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Toshiba">Toshiba</option>
+                    <option value="Vero">Vero</option>
+                    <option value="Xiaomi">Xiaomi</option>
+                </select>
+            </div>
+            <br>
+            <div class="container">
+                <label for="typename">Typename</label>
+                <select name="typename" id="typename" required>
+                    <option hidden disabled selected value=""></option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Netbook">Netbook</option>
+                    <option value="Notebook">Notebook</option>
+                    <option value="Ultrabook">Ultrabook</option>
+                    <option value="Workstation">Workstation</option>
+                    <option value="2 in 1 convertible">2 in 1 convertible</option>
+                </select>
+            </div>
+            <br>
+            <div class="container">
+                <label for="ram">RAM</label>
+                <select name="ram" id="ram" required>
+                    <option hidden disabled selected value=""></option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="12">12</option>
+                    <option value="16">16</option>
+                    <option value="24">24</option>
+                    <option value="32">32</option>
+                    <option value="64">64</option>
+                </select>
+            </div>
+            <br>
+            <div class="container">
+                <label for="opsys">Operating System</label>
+                <select name="opsys" id="opsys" required>
+                    <option hidden disabled selected value=""></option>
+                    <option value="Mac">MacOS</option>
+                    <option value="Windows">Windows</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <br>
+            <div class="container">
+                <label for="touchscreen">Touchscreen</label>
+                <select type="text" name="touchscreen"  required>
+                    <option hidden disabled selected value=""></option>
+                    <option value="1">Yes</option>
+                <option value="0">No</option>
+
+        </select>
+            </div>
+            <br>
+            <div class="container">
+                <label for="IPS">IPS</label>
+                <select type="text" name="IPS"  required>
+                    <option hidden disabled selected value=""></option>
+                    <option value="1">Yes</option>
+                <option value="0">No</option>
+
+        </select>
+            </div>
+            <br>
+            <div class="container">
+                <label for="ssd">Storage(in GBs)</label>
+                <select name="ssd" id="ssd" required>
+                    <option hidden disabled selected value=""></option>
+                        <option value="0">0</option>
+                        <option value="8">8</option>
+                        <option value="16">16</option>
+                        <option value="32">32</option>
+                        <option value="64">64</option>
+                        <option value="128">128</option>
+                        <option value="180">180</option>
+                        <option value="240">240</option>
+                        <option value="256">256</option>
+                        <option value="512">512</option>
+                        <option value="768">768</option>
+                        <option value="1000">1000</option>
+                        <option value="1024">1024</option>
+                      </select>   
+                      <select name="hdd" id="hdd">
+                        <option hidden disabled selected value=""></option>
+                        <option value="0">0</option>
+                        <option value="32">32</option>
+                        <option value="128">128</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                        <option value="2000">2000</option>
+                      </select>
+                      
+            </div>
+            <br>
+            <div class="container">
+                <label for="resolution">Resolution</label>
+                <select type="text" name="resolution"  required>
+                    <option hidden disabled selected value=""></option>
+                    <option value="1280x720">1280x720</option>
+                <option value="1366x768">1366x768</option>
+        <option value="1600x900">1600x900</option>
+        <option value="1920x1080">1920x1080</option>
+        <option value="2560x1440">2560x1440</option>
+        <option value="3840x2160">3840x2160</option>
+        </select>
+            </div>
+            <br>
+        
+         
+            
+            <div class="container">
+                <label for="gpu">GPU</label>
+                <select name="gpu" id="gpu" required>
+                    <option hidden disabled selected value=""></option>
+                    <option value="AMD">AMD</option>
+                    <option value="Intel">Intel</option>
+                    <option value="Nvidia">Nvidia</option>
+                </select>
+            </div>
+            <br>
+            <div class="container">
+                <label for="cpu-manufacturer">Cpu Manufacturer</label>
+                <select name="cpu_company" id="cpu-manufacturer" required>
+                    <option hidden disabled selected value=""></option>
+  <option value="Intel Core i5">Intel Core i5</option>
+  <option value="Intel Core i7">Intel Core i7</option>
+  <option value="AMD Processor">AMD Processor</option>
+  <option value="Intel Core i3">Intel Core i3</option>
+  <option value="Other Intel Processor">Other Intel Processor</option>
+</select>
+
+            </div>
+            <br>
+            
+            <div class="container">
+                <label for="Inches" required>Inches</label>
+                <input type="text" name="inches" id="Inches" placeholder="Inches" required>
+            </div>
+            <br>
+            <input type="submit" class="btn" value="Predict">
+        </form>
+    </div>
+
+    <div>
+        <h3>Predicted price is ₹{{prediction}}</h3>
+    </div>
+</body>
+</html>
